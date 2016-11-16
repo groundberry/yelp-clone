@@ -4,15 +4,20 @@
   <title>YelpClone</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if user_signed_in? %>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign in', new_user_session_path %>
-    <%= link_to 'Sign up', new_user_registration_path %>
-  <% end %>
+  <h1 class="logo">Yumm!</h1>
+  <div class="user-sign-in">
+    <% if user_signed_in? %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Sign in', new_user_session_path %>
+      <%= link_to 'Sign up', new_user_registration_path %>
+    <% end %>
+  </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <p class="alert"><%= yield %></p>
