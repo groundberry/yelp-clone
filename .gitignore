@@ -13,4 +13,4 @@
 /tmp
 
 DS_Store
-.env
+/config/local_env.yml
